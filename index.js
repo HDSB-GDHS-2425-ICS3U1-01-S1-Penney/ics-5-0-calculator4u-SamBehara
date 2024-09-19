@@ -4,12 +4,17 @@
 
 console.log('Calculator')
 
-let nums = prompt('Are you using more then 2 numbers, Yes or no?')
+//asking for user input for numbers and opperator being used
+let nums = prompt('Are you using more then 2 numbers, yes or no?')
 let num1 = parseInt(prompt('Enter the first value'))
+let opperator1 = prompt('Enter an operation(+,-,*,/')
 let num2 = parseInt(prompt('Enter the Second value'))
-let z = prompt('Enter an operation(+,-,*,/')
-let x = 0
 
+//declaring varables for later
+let opperator2 = 0
+let num3;
+
+//the function for two numbers in the calculator
 function addnumber(){
     const result = num1 + num2
     console.log(result)
@@ -25,6 +30,7 @@ function Mulply(){
     console.log(result)
 }
 
+//making sure that divivding by zero can't be done
 function dividie(){
     if (num2 == "0") {
        console.log('Cant divide by zero, try again') 
@@ -32,88 +38,93 @@ function dividie(){
         const result = num1 / num2
         console.log(result)   
     }
-   
-}
+   }
 
-if (z == '+') {
+// stoping the other code if your using more then two numbers so that two answer don't show
+if(nums=='yes'){
+}
+else if (opperator1 == '+')  {
   addnumber() 
 
-} if (z == '-') {
+} else if (opperator1 == '-')  {
    subtract() 
 
-} if (z == '*') {
+} else if (opperator1 == '*')  {
    Mulply() 
 
-}if(z == '/') {
+}else if (opperator1 == '/')  {
     dividie()
 }
 
+// if your using 3 numbers ask the user to input the other numbers and opperation
+if (nums == 'yes'){
+    opperator2 = prompt('Enter an operation(+,-,*,/')  
+     num3 = parseInt(prompt('Enter the 3 value'))
+}
 
-if (nums == ('yes')){
-    let num3 = parseInt(prompt('Enter the 3 value'))
-    let x = prompt('Enter an operation(+,-,*,/')  
-}
-else if ((x == '+') && (z == '+')) {
+
+// checking what the opperation are for the answer 
+ if ((opperator2 == '+') && (opperator1 == '+')) {
     const answer = num1 + num2 + num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '+') && (z == '-')) {
+else if ((opperator2 == '+') && (opperator1 == '-')) {
     const answer = num1 - num2 + num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '+') && (z == '/')) {
+else if ((opperator2 == '+') && (opperator1 == '/')) {
     const answer = num1 / num2 + num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '+') && (z == '*')) {
+else if ((opperator2 == '+') && (opperator1 == '*')) {
     const answer = num1 * num2 + num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '-') && (z == '+')) {
+else if ((opperator2 == '-') && (opperator1 == '+')) {
     const answer = num1 + num2 - num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '-') && (z == '-')) {
+else if ((opperator2 == '-') && (opperator1 == '-')) {
     const answer = num1 - num2 - num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '-') && (z == '/')) {
+else if ((opperator2 == '-') && (opperator1 == '/')) {
     const answer = num1 / num2 - num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '-') && (z == '*')) {
+else if ((opperator2 == '-') && (opperator1 == '*')) {
     const answer = num1 * num2 - num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '/') && (z == '+')) {
+else if ((opperator2 == '/') && (opperator1 == '+')) {
     const answer = num1 + num2 / num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '/') && (z == '-')) {
+else if ((opperator2 == '/') && (opperator1 == '-')) {
     const answer = num1 - num2 / num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '/') && (z == '/')) {
+else if ((opperator2 == '/') && (opperator1 == '/')) {
     const answer = num1 / num2 / num3
-    console.log('answer')
+    console.log(answer)
 }  
-else if ((x == '/') && (z == '*')) {
+else if ((opperator2 == '/') && (opperator1 == '*')) {
     const answer = num1 * num2 / num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '*') && (z == '+')) {
+else if ((opperator2 == '*') && (opperator1 == '+')) {
     const answer = num1 + num2 * num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '*') && (z == '-')) {
+else if ((opperator2 == '*') && (opperator1 == '-')) {
     const answer = num1 - num2 * num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '*') && (z == '/')) {
+else if ((opperator2 == '*') && (opperator1 == '/')) {
     const answer = num1 / num2 * num3
-    console.log('answer')
+    console.log(answer)
 }
-else if ((x == '*') && (z == '*')) {
+else if ((opperator2 == '*') && (opperator1 == '*')) {
     const answer = num1 * num2 * num3
-    console.log('answer')
+    console.log(answer)
 }
